@@ -28,7 +28,7 @@ class HomeController extends Controller
         QueryRecentlyViewed $recentlyViewed,
         QueryTopFavourites $topFavourites,
     ) {
-        $activity = $activities->latest(10);
+        // $activity = $activities->latest(10);
         $draftPages = [];
 
         if ($this->isSignedIn()) {
@@ -57,7 +57,7 @@ class HomeController extends Controller
         }
 
         $commonData = [
-            'activity'             => $activity,
+            // 'activity'             => $activity,
             'recents'              => $recents,
             'recentlyUpdatedPages' => $recentlyUpdatedPages,
             'draftPages'           => $draftPages,
